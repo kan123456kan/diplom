@@ -1,0 +1,149 @@
+.header-top {
+    background-color: #E2725B;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header-top div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #E2725B;
+    text-shadow: 1px 1px 2px #E2725B;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #FFF8DC;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navbar-nav {
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-item {
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-link {
+    color: #FFF8DC;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #E2725B;
+    text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item:active {
+    border-bottom-color: #E2725B;
+}
+
+.collapse.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar a,
+.header-top a {
+    text-decoration: none;
+    color: rgba(77, 76, 76, 0.55);
+    margin-right: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(77, 76, 76, 0.55);
+}
+
+.navbar .logo,
+.header-top .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.navbar ul,
+.header-top ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li,
+.header-top ul li {
+    margin-right: 20px;
+}
+
+.navbar .menu-icon,
+.header-top .menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .navbar {
+        font-size: 16px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .navbar {
+        font-size: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1212px) {
+    .navbar {
+        font-size: 14px;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0 !important;
+    }
+
+    .navbar-brand {
+        font-size: 14px;
+    }
+
+    .nav-link {
+        font-size: 0.7em;
+    }
+}
+
+

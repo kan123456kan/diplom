@@ -1,0 +1,142 @@
+.container-register {
+    display: flex;
+    height: auto;
+    background-color: #f0f2f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section {
+    flex: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/media/images/register-login/Form.webp');
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.welcome-section h1 {
+    color: white;
+}
+
+.button-welcome {
+    min-width: 30%;
+    border-radius: 200px !important;
+    margin-top: 20px;
+    white-space: normal;
+    padding: 10px 20px;
+    font-size: calc(10px + 1vmin);
+    text-align: center;
+}
+
+.register-section {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Changed from 60vh to auto for better responsiveness */
+    font-size: 15px;
+}
+
+.register-section form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.register-group label {
+    display: block;
+}
+
+.register-group input[type="text"],
+.register-group input[type="email"],
+.register-group input[type="password"] {
+    width: 100%;
+    padding: 3px;
+    border-radius: 2px;
+    border: 1px solid #f98a12;
+    transition: border-color 0.3s ease;
+}
+
+.register-group input:focus {
+    border-color: #fc9;
+    outline: none;
+}
+
+.register-group input[type="checkbox"] {
+    display: none;
+}
+
+.register-group input[type="checkbox"] + .custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.register-group input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '\2714';
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-group input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #f98a12;
+}
+
+.register-group input[type="checkbox"] + .custom-checkbox:hover {
+    border-color: #f98a12;
+}
+
+.register-group input[type="checkbox"]:focus + .custom-checkbox {
+    box-shadow: 0 0 3px 3px #f98a12;
+}
+
+.register-group label[for="rules_confirmation"] {
+    display: inline;
+    vertical-align: middle;
+}
+
+.button-register {
+    margin-top: 10px;
+}
+
+@media (max-width: 940px) {
+    .container-register {
+        flex-direction: column;
+    }
+
+    .welcome-section, .register-section {
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .button-welcome, .button-register {
+        width: 60%;
+    }
+
+    .register-section form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-welcome, .button-register {
+        width: 80%;
+    }
+}

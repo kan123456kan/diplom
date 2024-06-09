@@ -1,0 +1,325 @@
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #E2725B;
+    filter: grayscale(40%);
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-item::before, .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    z-index: 1;
+}
+
+.carousel-item::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+.carousel-item::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, transparent);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #E2725B;
+    border-radius: 50%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .carousel-item {
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .carousel-item {
+        height: 500px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-item {
+        height: 700px;
+    }
+}
+
+.innovation-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #82be85;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 100px;
+}
+
+.banner-content {
+    max-width: 50%;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.banner-content .subtitle {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    background-color: #f98a12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.learn-more-btn:hover {
+    background-color: #fc9;
+    transform: scale(1.05);
+}
+
+.banner-images {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.circle-image:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.circle-image:nth-child(2) {
+    top: 10%;
+    right: 10%;
+}
+
+.circle-image:nth-child(3) {
+    bottom: 10%;
+    left: 10%;
+}
+
+.circle-image:nth-child(4) {
+    bottom: 10%;
+    right: 10%;
+}
+
+@media (max-width: 992px) {
+    .circle-image {
+        width: 40%;
+        padding-bottom: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle-image {
+        width: 40%;
+        padding-bottom: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle-image {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+
+    .circle-image:nth-child(1), .circle-image:nth-child(2), .circle-image:nth-child(3), .circle-image:nth-child(4) {
+        margin: 163px -27px 146px 16px;
+        transform: none;
+        width: 88px;
+        height: 83px;
+    }
+
+    .banner-images {
+        height: 277px;
+    }
+
+    .banner-content h1 {
+        font-size: 14px;
+    }
+
+    .banner-content p {
+        font-size: 12px;
+    }
+
+    .learn-more-btn {
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+
+    .innovation-banner {
+       align-items: start;
+    }
+}
+
+@media (max-width: 375px) {
+    .circle-image {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+
+    .circle-image:nth-child(1), .circle-image:nth-child(2), .circle-image:nth-child(3), .circle-image:nth-child(4) {
+        margin: 160px -21px 132px -15px;
+        transform: none;
+        width: 88px;
+        height: 83px;
+    }
+
+    .banner-images {
+        height: 277px;
+    }
+
+    .banner-content h1 {
+        font-size: 14px;
+    }
+
+    .banner-content p {
+        font-size: 12px;
+    }
+
+    .learn-more-btn {
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+
+    .innovation-banner {
+       align-items: start;
+    }
+}
+
+.card-glav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.card-glav {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #f98a12;
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-image: linear-gradient(145deg, #82be85 0%, #FFF8DC 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-glav:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #82be85;
+}
+
+.card-glav-content {
+    padding: 20px;
+    width: 100%;
+    background-color: transparent;
+    order: 1;
+    color: #333;
+}
+
+.card-glav-image {
+    width: 100%;
+    order: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.card-glav-image img {
+    width: 30%;
+    object-fit: cover;
+    max-height: 200px;
+    margin-top: auto;
+}
+
+.card-glav h2, .card-glav p {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.view-all {
+    margin-top: 20px;
+}
+
+.view-all a{
+    color: white;
+    text-decoration:  none;
+}
+
+@media (max-width: 768px) {
+    .card-glav {
+        width: calc(100% - 20px);
+    }
+}
+

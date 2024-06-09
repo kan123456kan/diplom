@@ -1,0 +1,87 @@
+.banner-about {
+    margin-top: 80px;
+    position: relative;
+    background-image: url('/public/media/images/banners/banner_about.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.banner-about h1 {
+    color: white;
+}
+
+.banner-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-about-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-about-content h1 {
+    font-size: 2.5em;
+}
+
+.banner-about-content h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.awards {
+    margin-top: 20px;
+}
+
+.awards img {
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-about {
+        height: 300px;
+    }
+
+    .banner-about-content h1 {
+        font-size: 2em;
+    }
+
+    .banner-about-content h3 {
+        font-size: 1em;
+    }
+
+    .awards img {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .banner-about {
+        height: 300px;
+    }
+
+    .banner-about-content h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-about-content h3 {
+        font-size: 0.7em;
+    }
+
+    .awards img {
+        width: 40px;
+    }
+}
+
