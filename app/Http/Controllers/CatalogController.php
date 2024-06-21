@@ -27,6 +27,10 @@ class CatalogController extends Controller
             $query->where('product_type', $filterValue);
         }
 
+        if ($search = $request->query('search')) {
+            $query->where('title', 'like', '%' . $search . '%');
+        }
+
         $productsPerPage = 8;
         $totalProducts = $query->count();
         $currentPage = $request->input('page', 1);
